@@ -7,7 +7,10 @@ export default class Posts extends Component {
         super(props);
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res=>res.json())
-        .then(res=>console.log(res))
+        .then(data=>this.setState({posts:data}))
+    }
+    state={
+        posts:[],
     }
 
     render(){
