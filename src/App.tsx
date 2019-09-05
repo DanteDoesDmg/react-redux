@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Posts from './components/Posts';
+import Postform from './components/Postform'
 
 const App: React.FC = () => {
   return (
@@ -8,17 +10,11 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          This is how learned React with Redux and Typescript
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Postform></Postform>
+      <Posts></Posts>
     </div>
   );
 }
