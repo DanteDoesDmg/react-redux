@@ -13,11 +13,18 @@ export default class Posts extends Component {
     }
 
     render(){
-        
+        const postItems = this.state.posts.map((post:singlePost)=>(
+            <div key={post.id}>
+                <h4 className='App_postTitle'>{post.title}</h4>
+                <p>{post.body}</p>
+            </div>
+        ))
         console.log(this.state.posts)
         return(
             <div className='App_posts'>
-            <h1>Posts</h1></div>
+            <h1>Posts</h1>
+            {postItems}
+            </div>
         )
     }
 }
