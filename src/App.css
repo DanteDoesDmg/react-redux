@@ -1,3 +1,9 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -25,7 +31,14 @@
 .App-link {
   color: #61dafb;
 }
-
+.App_posts{
+  text-align: left;
+  padding-left:5vw;
+}
+.App_postTitle{
+  text-transform: uppercase;
+  margin: 15px 0 10px 0;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

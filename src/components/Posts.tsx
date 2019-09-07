@@ -1,6 +1,5 @@
-import React, {Component} from 'react'
-
-
+import React, {Component} from 'react';
+import {singlePost} from './Interfaces';
 export default class Posts extends Component {
     
     constructor(props:object){
@@ -14,10 +13,11 @@ export default class Posts extends Component {
     }
 
     render(){
+        
+        console.log(this.state.posts)
         return(
-            <div>
-            <h1>Posts</h1>
-            </div>
+            <div className='App_posts'>
+            <h1>Posts</h1></div>
         )
     }
 }
