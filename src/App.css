@@ -31,13 +31,18 @@
 .App-link {
   color: #61dafb;
 }
-.App_posts{
+.App_posts, .App_newPost {
   text-align: left;
   padding-left:5vw;
+  width: 60%;
+  margin: 0 auto;
 }
 .App_postTitle{
   text-transform: uppercase;
   margin: 15px 0 10px 0;
+}
+label,input,textarea{
+display:block;
 }
 @keyframes App-logo-spin {
   from {

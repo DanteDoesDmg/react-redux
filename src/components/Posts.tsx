@@ -19,7 +19,6 @@ export default class Posts extends Component {
                 <p>{post.body}</p>
             </div>
         ))
-        console.log(this.state.posts)
         return(
             <div className='App_posts'>
             <h1>Posts</h1>
