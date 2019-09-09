@@ -1,19 +1,13 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {fetchPosts} from '../actions/postAction'
 import {singlePost} from './Interfaces';
-export default class Posts extends Component {
-    
-    constructor(props:object){
-        super(props);
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(res=>res.json())
-        .then(data=>this.setState({posts:data}))
-    }
-    state={
-        posts:[],
-    }
 
+
+class Posts extends Component {
+    props:any
     render(){
-        const postItems = this.state.posts.map((post:singlePost)=>(
+        const postItems = this.props.posts.map((post:singlePost)=>(
             <div key={post.id}>
                 <h4 className='App_postTitle'>{post.title}</h4>
                 <p>{post.body}</p>
@@ -27,3 +21,9 @@ export default class Posts extends Component {
         )
     }
 }
+
+
+const mapStateToProps = (state:any) =>({
+    posts: state.posts.items
+})
+export default connect(mapStateToProps, {fetchPosts})(Posts)
