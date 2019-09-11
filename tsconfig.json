@@ -20,6 +20,6 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src", "src/reducers/index.ts", "src/index.tsx"
   ]
 }
