@@ -1,4 +1,5 @@
 import { FETCH_POSTS, NEW_POST, PostAction } from "../actions/types";
+
 export interface State {
   items: Array<any>;
   item: object;

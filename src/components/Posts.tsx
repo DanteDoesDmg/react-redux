@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/postAction'
-import { singlePost } from './Interfaces';
+import { singlePost } from '../Interfaces';
 import { AppState } from '../reducers'
 
 

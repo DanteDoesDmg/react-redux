@@ -1,14 +1,9 @@
 import React, { Component, ChangeEvent, FormEvent } from 'react';
 import { connect } from 'react-redux';
 import { createPost } from '../actions/postAction';
-import { any } from 'prop-types';
 
 class PostForm extends Component {
-
-    props={
-        createPost: Function()
-    };
-
+    props:any
     state = {
         title: '',
         body: '',
