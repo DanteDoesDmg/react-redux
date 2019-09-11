@@ -15,8 +15,7 @@ const App: React.FC = () => {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>f
-            This is how learned React with Redux and Typescript
+          <p>This is how learned React with Redux and Typescript
         </p>
         </header>
         <Postform></Postform>
