@@ -1,21 +1,28 @@
-import {FETCH_POSTS, NEW_POST} from '../actions/types';
-import {action} from '../components/Interfaces'
-const initialState:object = {
-    items: [],
-    item: {}
+import { FETCH_POSTS, NEW_POST, PostAction } from "../actions/types";
+export interface State {
+  items: Array<any>;
+  item: object;
 }
+const initialState: State = {
+  items: [],
+  item: {}
+};
 
-export default function(state = initialState, action:action){
-    console.log('henlo',action);
-    switch(action.type){
-    
-        case FETCH_POSTS:
-            return {
-                ...state,
-                items:action.payload
-            }
-        default:
-            console.log('here')
-            return state
-    }
+export default function(state = initialState, action: PostAction) {
+  switch (action.type) {
+    case FETCH_POSTS:
+      return {
+        ...state,
+        items: action.payload
+      };
+      case NEW_POST:
+          return{
+              ...state,
+              item:action.payload
+          }
+    default:
+      return {
+        ...state
+      };
+  }
 }
