@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createPost } from '../actions/postAction';
 
 class PostForm extends Component {
-    props:any
+    props: any
     state = {
         title: '',
         body: '',

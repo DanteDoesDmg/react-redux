@@ -10,8 +10,8 @@ class Posts extends Component {
         this.props.fetchPosts()
     }
     props: any
-   UNSAFE_componentWillReceiveProps(nextProps:any){
-        if(nextProps.newPost){
+    UNSAFE_componentWillReceiveProps(nextProps: any) {
+        if (nextProps.newPost) {
             nextProps.newPost.id = this.props.posts.length + 1;
             this.props.posts.unshift(nextProps.newPost)
         }
@@ -36,6 +36,6 @@ class Posts extends Component {
 
 const mapStateToProps = (state: AppState) => ({
     posts: state.posts.items,
-    newPost:state.posts.item
+    newPost: state.posts.item
 })
 export default connect(mapStateToProps, { fetchPosts })(Posts)
