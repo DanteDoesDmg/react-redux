@@ -10,8 +10,9 @@ class Posts extends Component {
         this.props.fetchPosts()
     }
     props: any
-    componentWillReceiveProps(nextProps:any){
+   UNSAFE_componentWillReceiveProps(nextProps:any){
         if(nextProps.newPost){
+            nextProps.newPost.id = this.props.posts.length + 1;
             this.props.posts.unshift(nextProps.newPost)
         }
     }

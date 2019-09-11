@@ -23,7 +23,10 @@ class PostForm extends Component {
         };
 
         this.props.createPost(post)
-
+        this.setState({
+            title: '',
+            body: '',
+        })
     }
 
     render() {
@@ -35,9 +38,9 @@ class PostForm extends Component {
                         <input name='title' type='text' placeholder='Name your post' onChange={this.onChange} value={this.state.title} />
                     </label>
                     <label>Text:
-                        <textarea name='body' onChange={this.onChange} />
+                        <textarea name='body' onChange={this.onChange} value={this.state.body} />
                     </label>
-                    <button type='submit'>Add post</button>
+                    <button id='App_addpost' type='submit'>Add post</button>
                 </form>
             </div>
         )
